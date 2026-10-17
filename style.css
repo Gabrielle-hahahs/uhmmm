@@ -140,3 +140,153 @@ h1 span { color: var(--pink); font-style: italic; }
   .letter-grid { grid-template-columns: 1fr; }
   .hero { padding-top: 45px; }
 }
+.love-playlist {
+  max-width: 520px;
+  margin: 40px auto;
+  padding: 24px 18px;
+  border-radius: 24px;
+  background: #fff7fb;
+  color: #593849;
+  font-family: inherit;
+}
+
+.playlist-label,
+.now-playing-label {
+  color: #cc6c96;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.love-playlist h2 {
+  margin: 8px 0;
+  font-size: 26px;
+}
+
+.playlist-subtitle {
+  color: #9b7b8b;
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+.song-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.song-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 15px;
+  background: white;
+  border: 1px solid #f7e3ed;
+}
+
+.song-item.active {
+  background: #ffe8f2;
+  border-color: #e9a4c2;
+}
+
+.song-icon,
+.now-playing-icon {
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #fce1ed;
+  color: #cf5f91;
+  font-size: 23px;
+}
+
+.song-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.song-details h3,
+.now-playing-info h3 {
+  margin: 0 0 4px;
+  font-size: 14px;
+}
+
+.song-details p,
+.now-playing-info p {
+  margin: 0;
+  font-size: 12px;
+  color: #a07f90;
+}
+
+.song-select,
+.play-button {
+  border: none;
+  cursor: pointer;
+  color: #c95086;
+  background: transparent;
+  font-size: 23px;
+  padding: 6px;
+}
+
+.music-player {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0 8px;
+  margin-top: 18px;
+  border-top: 1px solid #f1d8e5;
+}
+
+.now-playing-icon {
+  font-size: 27px;
+  background: #f8d5e5;
+}
+
+.now-playing-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.now-playing-info h3 {
+  overflow-wrap: anywhere;
+}
+
+.now-playing-label {
+  font-size: 9px !important;
+  margin-bottom: 5px !important;
+}
+
+.play-button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #e68bb3;
+  color: white;
+  font-size: 18px;
+}
+
+.progress-area {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 11px;
+  color: #a07f90;
+}
+
+#progress-bar {
+  flex: 1;
+  min-width: 0;
+  accent-color: #d96f9e;
+  cursor: pointer;
+}
+
+.song-item button:focus-visible,
+.play-button:focus-visible,
+#progress-bar:focus-visible {
+  outline: 2px solid #c95086;
+  outline-offset: 3px;
+  }
