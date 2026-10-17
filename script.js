@@ -71,8 +71,8 @@ const songs = [
   },
   {
     title: "Janice",
-    artist: "",
-    file: "file: "https://raw.githubusercontent.com/Gabrielle-hahahs/uhmmm/main/Janice(128k).mp3"
+    artist: "Dilaw",
+    file: "https://raw.githubusercontent.com/Gabrielle-hahahs/uhmmm/main/Janice(128k).mp3"
   },
   {
     title: "Song 3",
