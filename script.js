@@ -63,3 +63,179 @@ document.getElementById("noteBtn").addEventListener("click", () => {
   document.getElementById("loveNote").textContent = notes[index];
   document.getElementById("noteCount").textContent = `You picked ${noteCount} little ${noteCount === 1 ? "note" : "notes"} ♡`;
 });
+const songs = [
+  {
+    title: "Palagi",
+    artist: "TJ Monterde",
+    file: "./Palagi.mp3"
+  },
+  {
+    title: "Song 2",
+    artist: "Artist name",
+    file: "./Song2.mp3"
+  },
+  {
+    title: "Song 3",
+    artist: "Artist name",
+    file: "./Song3.mp3"
+  },
+  {
+    title: "Song 4",
+    artist: "Artist name",
+    file: "./Song4.mp3"
+  },
+  {
+    title: "Song 5",
+    artist: "Artist name",
+    file: "./Song5.mp3"
+  }
+];
+
+const songList = document.getElementById("song-list");
+const audio = document.getElementById("audio-player");
+const playPause = document.getElementById("play-pause");
+const currentTitle = document.getElementById("current-title");
+const currentArtist = document.getElementById("current-artist");
+const progressBar = document.getElementById("progress-bar");
+const currentTime = document.getElementById("current-time");
+const duration = document.getElementById("duration");
+
+let selectedSong = -1;
+
+function formatTime(seconds) {
+  if (!Number.isFinite(seconds)) return "0:00";
+  const mins = Math.floor(seconds / 60);
+  const secs = Math.floor(seconds % 60);
+  return `${mins}:${String(secs).padStart(2, "0")}`;
+}
+
+function renderSongs() {
+  songList.innerHTML = "";
+
+  songs.forEach((song, index) => {
+    const item = document.createElement("div");
+    item.className = "song-item";
+    item.dataset.index = index;
+
+    const icon = document.createElement("div");
+    icon.className = "song-icon";
+    icon.textContent = "♫";
+
+    const details = document.createElement("div");
+    details.className = "song-details";
+
+    const title = document.createElement("h3");
+    title.textContent = song.title;
+
+    const artist = document.createElement("p");
+    artist.textContent = song.artist;
+
+    details.append(title, artist);
+
+    const button = document.createElement("button");
+    button.className = "song-select";
+    button.type = "button";
+    button.textContent = "▶";
+    button.setAttribute("aria-label", `Play ${song.title}`);
+
+    button.addEventListener("click", () => playSong(index));
+
+    item.append(icon, details, button);
+    songList.appendChild(item);
+  });
+
+  updateActiveSong();
+}
+
+function updateActiveSong() {
+  document.querySelectorAll(".song-item").forEach((item, index) => {
+    const active = index === selectedSong;
+    item.classList.toggle("active", active);
+
+    const button = item.querySelector(".song-select");
+    if (button) {
+      button.textContent =
+        active && !audio.paused ? "Ⅱ" : "▶";
+    }
+  });
+}
+
+async function playSong(index) {
+  if (index < 0 || index >= songs.length) return;
+
+  selectedSong = index;
+  const song = songs[index];
+
+  currentTitle.textContent = song.title;
+  currentArtist.textContent = song.artist;
+
+  audio.src = song.file;
+  audio.load();
+
+  updateActiveSong();
+
+  try {
+    await audio.play();
+    playPause.textContent = "Ⅱ";
+  } catch (error) {
+    playPause.textContent = "▶";
+    alert(
+      `Hindi ma-play ang "${song.title}". ` +
+      `Tingnan kung na-upload na ang ${song.file} sa GitHub.`
+    );
+  }
+
+  updateActiveSong();
+}
+
+playPause.addEventListener("click", async () => {
+  if (selectedSong === -1) {
+    await playSong(0);
+    return;
+  }
+
+  if (audio.paused) {
+    try {
+      await audio.play();
+    } catch (error) {
+      alert("Hindi ma-play ang kanta. Tingnan ang audio file.");
+    }
+  } else {
+    audio.pause();
+  }
+
+  playPause.textContent = audio.paused ? "▶" : "Ⅱ";
+  updateActiveSong();
+});
+
+audio.addEventListener("timeupdate", () => {
+  currentTime.textContent = formatTime(audio.currentTime);
+
+  if (Number.isFinite(audio.duration) && audio.duration > 0) {
+    progressBar.value =
+      (audio.currentTime / audio.duration) * 100;
+  }
+});
+
+audio.addEventListener("loadedmetadata", () => {
+  duration.textContent = formatTime(audio.duration);
+});
+
+progressBar.addEventListener("input", () => {
+  if (Number.isFinite(audio.duration) && audio.duration > 0) {
+    audio.currentTime = (Number(progressBar.value) / 100)
+      * audio.duration;
+  }
+});
+
+audio.addEventListener("ended", () => {
+  if (selectedSong < songs.length - 1) {
+    playSong(selectedSong + 1);
+  } else {
+    playPause.textContent = "▶";
+    updateActiveSong();
+  }
+});
+
+renderSongs();
+                       
