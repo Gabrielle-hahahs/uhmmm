@@ -65,9 +65,9 @@ document.getElementById("noteBtn").addEventListener("click", () => {
 });
 const songs = [
   {
-    title: "Palagi",
-    artist: "TJ Monterde",
-    file: "./Palagi.mp3"
+    title: "o_ninanais(128k).mp3",
+    artist: "Arthur Nery",
+    file: "https://github.com/Gabrielle-hahahs/uhmmm/blob/de5ca5cd4e9c35132e517d3aaeb2af6cc6c555df/o_ninanais(128k).mp3"
   },
   {
     title: "Song 2",
