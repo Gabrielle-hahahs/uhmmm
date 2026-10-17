@@ -80,14 +80,14 @@ const songs = [
     file: "https://raw.githubusercontent.com/Gabrielle-hahahs/uhmmm/main/ONE_IN_A_MILLION__Official_Video_(256k).mp3"
   },
   {
-    title: "Song 4",
-    artist: "Artist name",
-    file: "./Song4.mp3"
+    title: "Kabisado",
+    artist: "IVOS",
+    file: "https://raw.githubusercontent.com/Gabrielle-hahahs/uhmmm/main/Kabisado(128k).mp3"
   },
   {
-    title: "Song 5",
-    artist: "Artist name",
-    file: "./Song5.mp3"
+    title: "Kalapastangan",
+    artist: "FitterKarma",
+    file: "https://raw.githubusercontent.com/Gabrielle-hahahs/uhmmm/main/Kalapastangan(128k).mp3"
   }
 ];
 
