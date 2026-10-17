@@ -70,9 +70,9 @@ const songs = [
     file: "https://raw.githubusercontent.com/Gabrielle-hahahs/uhmmm/main/o_ninan%20nais(128k).mp3"
   },
   {
-    title: "Song 2",
-    artist: "Artist name",
-    file: "./Song2.mp3"
+    title: "Janice",
+    artist: "",
+    file: "file: "https://raw.githubusercontent.com/Gabrielle-hahahs/uhmmm/main/Janice(128k).mp3"
   },
   {
     title: "Song 3",
