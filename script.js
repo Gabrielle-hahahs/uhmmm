@@ -67,7 +67,7 @@ const songs = [
   {
     title: "o_ninanais(128k).mp3",
     artist: "Arthur Nery",
-    file: "https://raw.githubusercontent.com/Gabrielle-hahahs/uhmmm/main/o_ninan%20nais(128k).mp3"
+    file: https://raw.githubusercontent.com/Gabrielle-hahahs/uhmmm/main/o_ninan%20nais(128k).mp3"
   },
   {
     title: "Janice",
