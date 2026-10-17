@@ -75,9 +75,9 @@ const songs = [
     file: "https://raw.githubusercontent.com/Gabrielle-hahahs/uhmmm/main/Janice(128k).mp3"
   },
   {
-    title: "Song 3",
-    artist: "Artist name",
-    file: "./Song3.mp3"
+    title: "One in a million",
+    artist: "Rex Orange County",
+    file: "https://raw.githubusercontent.com/Gabrielle-hahahs/uhmmm/main/ONE_IN_A_MILLION__Official_Video_(256k).mp3"
   },
   {
     title: "Song 4",
