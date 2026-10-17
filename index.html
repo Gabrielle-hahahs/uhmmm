@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff3f7">
+  <title>A Little Place for Lovelove ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="floating-hearts" aria-hidden="true">♡　♥　♡　✧　♡</div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Home">♡ for Lovelove</a>
+    <span class="tiny-bow" aria-hidden="true">🎀</span>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-icon" aria-hidden="true">🎀</div>
+      <p class="eyebrow">A LITTLE CORNER OF THE INTERNET</p>
+      <h1>A Little Place<br>for <span>Lovelove</span> ♡</h1>
+      <p class="intro">A few little things, made with love, just for you.</p>
+      <button class="primary-btn" id="surpriseBtn">Open your little world ♡</button>
+      <p class="surprise-message" id="surpriseMessage" hidden>
+        Hi, love. No grand words — just a little reminder that I'm really happy you're part of my life. 💗
+      </p>
+      <div class="scroll-hint">made for you, always <span>♡</span></div>
+    </section>
+
+    <section class="section" id="letters">
+      <div class="section-heading">
+        <span class="section-kicker">01 / LITTLE LETTERS</span>
+        <h2>Open When Letters</h2>
+        <p>Choose the little note you need today.</p>
+      </div>
+      <div class="letter-grid" id="letterGrid">
+        <button class="letter-card" data-letter="miss"><span class="card-emoji">💌</span><strong>Open when you miss me</strong><small>a little reminder</small></button>
+        <button class="letter-card" data-letter="tired"><span class="card-emoji">🌷</span><strong>Open when you're tired</strong><small>take a soft breath</small></button>
+        <button class="letter-card" data-letter="sad"><span class="card-emoji">🧸</span><strong>Open when you're sad</strong><small>you don't have to explain</small></button>
+        <button class="letter-card" data-letter="smile"><span class="card-emoji">🎀</span><strong>Open when you need a smile</strong><small>a tiny happy thought</small></button>
+      </div>
+      <article class="letter-paper" id="letterPaper" aria-live="polite" hidden>
+        <span class="paper-heart">♡</span>
+        <h3 id="letterTitle">A little letter for you</h3>
+        <p id="letterText"></p>
+        <button class="text-btn" id="closeLetter">Fold the letter ✧</button>
+      </article>
+    </section>
+
+    <section class="section blush-section" id="jar">
+      <div class="section-heading">
+        <span class="section-kicker">02 / TINY REMINDERS</span>
+        <h2>Jar of Love Notes</h2>
+        <p>Pick a note whenever you want a little reminder.</p>
+      </div>
+      <div class="jar-wrap">
+        <div class="jar" aria-hidden="true"><span>♡</span><i>✧</i><b>♥</b></div>
+        <button class="primary-btn" id="noteBtn">Pick a little note</button>
+        <div class="love-note" id="loveNote" aria-live="polite">Your little note will appear here. ♡</div>
+        <p class="note-count" id="noteCount">There are little reminders waiting for you.</p>
+      </div>
+    </section>
+
+    <section class="section" id="playlist">
+      <div class="section-heading">
+        <span class="section-kicker">03 / SONGS THAT REMIND ME OF YOU</span>
+        <h2>Our Love Playlist</h2>
+        <p>Add the songs that make you think of each other.</p>
+      </div>
+      <div class="playlist-list" id="playlistList">
+        <article class="song-card">
+          <div class="song-icon">♫</div>
+          <div class="song-info"><strong>Your song goes here</strong><span>Replace this with a song you chose for her</span></div>
+          <a class="song-link" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">Listen ↗</a>
+        </article>
+        <article class="song-card">
+          <div class="song-icon">♡</div>
+          <div class="song-info"><strong>Another song for us</strong><span>Add a short reason why it reminds you of her</span></div>
+          <a class="song-link" href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">Listen ↗</a>
+        </article>
+        <p class="edit-hint">Tip: edit the song titles, notes, and links in <code>index.html</code>.</p>
+      </div>
+    </section>
+
+    <section class="section blush-section" id="reasons">
+      <div class="section-heading">
+        <span class="section-kicker">04 / A FEW LITTLE REASONS</span>
+        <h2>Reasons Why I Love You</h2>
+        <p>Small things about you mean more than you know.</p>
+      </div>
+      <div class="reasons-list">
+        <article class="reason"><span>01</span><p>The little things you do, even when you don't notice them.</p><b>♡</b></article>
+        <article class="reason"><span>02</span><p>The way talking to you can make an ordinary day feel better.</p><b>♡</b></article>
+        <article class="reason"><span>03</span><p>You don't have to be extra or say a lot to be special to me.</p><b>♡</b></article>
+        <article class="reason"><span>04</span><p>I'm grateful that I get to know you, little by little.</p><b>♡</b></article>
+        <p class="edit-hint">Make these more personal by replacing them with your own reasons.</p>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="closing-bow">🎀</div>
+      <h2>That's all for now, love.</h2>
+      <p>Just a little place to remind you that you're thought of, appreciated, and cared for.</p>
+      <span>made with love ♡</span>
+    </section>
+  </main>
+
+  <footer class="footer">for Lovelove · a little pink corner of the internet ♡</footer>
+  <script src="script.js"></script>
+</body>
+</html>
